@@ -27,7 +27,7 @@ io.on('connection', (socket) => {
   socket.on('new-user-joined', name => {
     users[socket.id] = name;
     socket.broadcast.emit('user-joined', name);
-    console.log('New user Connected');
+    //console.log('New user Connected');
     console.log(`${users[socket.id]} with id: ${socket.id} joined the room`)
   });
 
