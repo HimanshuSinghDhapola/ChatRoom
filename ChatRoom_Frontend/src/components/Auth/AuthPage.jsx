@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SocketContext } from '../../Context/SocketContext'
 import './styles.css';
@@ -11,12 +10,12 @@ function AuthPage() {
   const socket = io("http://localhost:3000");
   const navigate = useNavigate();
 
-  const [userName, setUserName] = useState('');
+  const socketState = useContext(SocketContext);
 
   function handleSubmit(event){
     event.preventDefault();
-    socket.emit('new-user-joined', userName);
-    navigate('/chatroom', {replace: true, state: {socket}});
+    socket.emit('new-user-joined', socketState.userName);
+    navigate('/chatroom');
   }
 
   return (
@@ -28,9 +27,9 @@ function AuthPage() {
           <form onSubmit={handleSubmit}>
               <input
                 type='text'
-                onChange={(e) => setUserName(e.target.value)}
+                onChange={(e) => socketState.setUserName(e.target.value)}
                 placeholder='UserName'
-                value={userName}
+                value={socketState.userName}
               />
               <button className=' p-4 m-4 bg-slate-400 rounded-lg border-black'>
                 Join the Room

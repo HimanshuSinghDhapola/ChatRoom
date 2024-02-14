@@ -31,9 +31,9 @@ io.on('connection', (socket) => {
     console.log(`${users[socket.id]} with id: ${socket.id} joined the room`)
   });
 
-  socket.on('send', message => {
-    socket.broadcast.emit('receive', {message: message, name: users[socket.id]});
-  });
+  socket.on('send-message', (data) => {
+    socket.broadcast.emit('receive-message', data);
+  })
 })
 
 server.listen(port, () => {

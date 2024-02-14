@@ -10,7 +10,9 @@ export const SocketProvider = (props) => {
 
     return (
         <SocketContext.Provider value={{
-            userName
+            userName,
+            setUserName,
+            socket
         }}>
             {props.children}
         </SocketContext.Provider>
