@@ -34,7 +34,7 @@ function AuthPage() {
         </div>
         <div className="w-full pt-6 flex flex-col lg:mx-10 items-center lg:items-center lg:justify-center lg:pl-4 lg:w-1/2 h-fit lg:my-auto">
           <h1 className=" font-[Avenir] text-xl md:text-3xl font-medium text-[#e8e8e8]">
-            WELCOME 👋
+            WELCOME <span className="emoji">👋</span>
           </h1>
           <div className="font-[Avenir] text-[#afafaf] tracking-wide text-lg pb-6">
             Enter the username and join the chats

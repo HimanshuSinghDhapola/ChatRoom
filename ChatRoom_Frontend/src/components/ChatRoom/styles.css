@@ -1,7 +1,14 @@
+.wrapper {
+  background-image: url("https://images.unsplash.com/photo-1483354483454-4cd359948304?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .container {
   max-width: 90%;
   width: 900px;
-  box-shadow: 20px 0px 30px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 4px 30px 0px rgba(0, 0, 0, 0.1);
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   margin: auto;
@@ -16,7 +23,6 @@
   min-width: 100px;
   width: fit-content;
   padding: 0.25rem;
-  border: 1px solid black;
   margin: 7px 7px;
   border-radius: 15px;
 }
@@ -26,6 +32,7 @@
   float: left;
   clear: both;
   padding-top: 0.1rem;
+  border-radius: 0px 15px 15px 15px;
 }
 
 .right {
@@ -33,6 +40,7 @@
   float: right;
   clear: both;
   padding-top: 0.1rem;
+  border-radius: 15px 0px 15px 15px;
 }
 
 .center {
@@ -53,11 +61,9 @@
 }
 
 .msgInp {
-  border: 2px solid black;
   max-width: 75vw;
   width: 100%;
-  margin: 2px 2px;
-  border-radius: 15px;
+  border-radius: 8px;
   padding: 0.5rem;
 }
 
@@ -67,13 +73,12 @@
   justify-content: center;
   gap: 5px;
   padding: 0.5rem;
-  border-radius: 10px;
-  margin: 5px;
+  border-radius: 8px;
+  margin-left: 5px;
   color: white;
   background-color: #fa541c;
   border: none;
   outline: none;
-  border-radius: 15px;
   cursor: pointer;
   transition: all 0.44s ease;
   -webkit-transition: all 0.44s ease;

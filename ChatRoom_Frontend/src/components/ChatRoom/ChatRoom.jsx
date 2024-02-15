@@ -12,11 +12,11 @@ function ChatRoom() {
   const [messageInp, setMessageInp] = useState("");
   const [feed, setFeed] = useState([]);
 
-  if (userName === "") {
-    useEffect(() => {
+  useEffect(() => {
+    if(userName === ""){
       navigate(-1);
-    }, []);
-  }
+    }
+  }, [])
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -55,7 +55,7 @@ function ChatRoom() {
   }, []);
 
   return (
-    <div className="w-full h-screen overflow-hidden">
+    <div className="wrapper w-full h-screen overflow-hidden">
       <Header />
       <div className="chat-card p-4">
         <div className="container my-auto mx-auto">
