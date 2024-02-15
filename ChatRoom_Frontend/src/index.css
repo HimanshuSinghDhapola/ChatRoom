@@ -2,14 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    font-family: 'Avenir';
+* {
+  font-family: "Segoe UI";
 }
 
-body{
-    /* background: linear-gradient(75deg, rgb(20, 23, 33) 0%, rgb(20, 23, 33) 50%, rgba(20, 23, 33,0.8) 100%); */
-    background-image: url('./assets/background_img.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+body {
+  background-image: url("./assets/background_img.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.shadow {
+  background: linear-gradient(
+    270deg,
+    rgba(20, 23, 33, 0.1) 0%,
+    rgba(20, 23, 33, 0.6) 40%,
+    rgba(20, 23, 33, 1) 100%
+  );
 }

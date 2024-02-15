@@ -1,78 +1,84 @@
-.chat-card{
-    margin-bottom: 1rem;
-}
-.container{
-    max-width: 90%;
-    width: 900px;
-    box-shadow: 20px 0px 30px 10px rgba(0, 0, 0, 0.5);
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    margin: auto;
-    height: 80vh;
-    overflow-y: auto;
-    border-radius: 15px;
-}
-
-.message{
-    width: 40%;
-    padding: 0.25rem;
-    border: 1px solid black;
-    margin: 2px 7px;
-    border-radius: 15px;
+.container {
+  max-width: 90%;
+  width: 900px;
+  box-shadow: 20px 0px 30px 10px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  margin: auto;
+  height: 70vh;
+  overflow-y: auto;
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
-.left{
-    background-color: #606160;
-    float: left;
-    clear: both;
+.message {
+  min-width: 100px;
+  width: fit-content;
+  padding: 0.25rem;
+  border: 1px solid black;
+  margin: 7px 7px;
+  border-radius: 15px;
 }
 
-.right{
-    background-color: #07ada8;
-    float: right;
-    clear: both;
+.left {
+  background-color: #b4e4ff;
+  float: left;
+  clear: both;
+  padding-top: 0.1rem;
 }
 
-.center{
-    background-color: beige;
-    margin: 15px auto;
-    clear: both;
-    text-align: center;
+.right {
+  background-color: #dfffd8;
+  float: right;
+  clear: both;
+  padding-top: 0.1rem;
 }
 
-.form{
-    max-width: 900px;
-    width: 90%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
+.center {
+  min-width: 30%;
+  width: fit-content;
+  background-color: beige;
+  margin: 7px auto;
+  clear: both;
+  text-align: center;
 }
 
-.msgInp{
-    border: 2px solid black;
-    max-width: 75vw;
-    width: 100%;
-    margin: 2px 2px;
-    border-radius: 15px;
-    padding: 0.5rem;
+.form {
+  max-width: 900px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
 }
 
-.btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    padding: 0.5rem;
-    border-radius: 10px;
-    margin: 5px;
-    color: white;
-    background-color: #fa541c;
-    border: none;
-    outline: none;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: all .44s ease;
-    -webkit-transition: all .44s ease;
-    -moz-transition: all .44s ease;
+.msgInp {
+  border: 2px solid black;
+  max-width: 75vw;
+  width: 100%;
+  margin: 2px 2px;
+  border-radius: 15px;
+  padding: 0.5rem;
 }
-.btn:hover { filter: brightness(145%); }
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0.5rem;
+  border-radius: 10px;
+  margin: 5px;
+  color: white;
+  background-color: #fa541c;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.44s ease;
+  -webkit-transition: all 0.44s ease;
+  -moz-transition: all 0.44s ease;
+}
+.btn:hover {
+  filter: brightness(145%);
+}
