@@ -10,3 +10,4 @@ data of the user's communication and the conversation gets deleted after the use
 4. Go inside the Frontend directory `cd Frontend_ChatRoom` and install all the dependencies by `npm i`
 5. On the root directory of the project write `npm start` an instance of the app will start running on `http://localhost:5173/`.
 
+Checkout Project [here](https://chatroom-01.netlify.app/)
