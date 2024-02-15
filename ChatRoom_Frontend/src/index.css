@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+    font-family: 'Avenir';
+}
+
+body{
+    /* background: linear-gradient(75deg, rgb(20, 23, 33) 0%, rgb(20, 23, 33) 50%, rgba(20, 23, 33,0.8) 100%); */
+    background-image: url('./assets/background_img.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

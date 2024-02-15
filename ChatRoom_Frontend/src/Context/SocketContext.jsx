@@ -5,7 +5,9 @@ export const SocketContext = createContext(null);
 
 export const SocketProvider = (props) => {
 
-    const socket = io("http://localhost:3000");
+    const BASE_URL = "http://localhost:3000";
+
+    const socket = io(BASE_URL);
     const [userName, setUserName] = useState('');
 
     return (

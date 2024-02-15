@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { SocketContext } from "../../Context/SocketContext";
+import { IoSend } from "react-icons/io5";
 import "./styles.css";
 
 function ChatRoom() {
@@ -43,8 +44,7 @@ function ChatRoom() {
   }, [socket]);
 
   return (
-    <div>
-      ChatRoom
+    <div className="chat-card">
       <div className="container">
         {feed.map((feedContent) => {
           return (
@@ -71,14 +71,15 @@ function ChatRoom() {
         })}
       </div>
       <div className="send">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="form">
           <input
             className="msgInp"
+            placeholder="Write a message"
             type="text"
             onChange={(e) => setMessageInp(e.target.value)}
             value={messageInp}
           />
-          <button className="btn">Send</button>
+          <button className="btn">Send <IoSend size={20}/></button>
         </form>
       </div>
     </div>
