@@ -8,7 +8,7 @@ function Header() {
 
   return (
     <div className=" top-0 inline-block w-full p-10 py-2 pt-8">
-      <div className=" w-[100px] lg:w-[150px]  float-start ">
+      <div className=" w-[100px] lg:w-[150px]  float-start lg:p-0 pt-[15px] ">
         <img src={logo} alt="logo image" />
       </div>
       <div className=" text-xl text-white float-end flex flex-col items-center w-4 px-7 drop-shadow-2xl">

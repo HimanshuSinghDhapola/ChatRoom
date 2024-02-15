@@ -12,8 +12,8 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    // origin: "https://chat-room01.netlify.app",
-    origin: process.env.URL,
+    // origin: "https://chatroom-01.netlify.app",
+    origin: "*",
     methods: ["GET", "POST"],
     credentials: true,
   },
