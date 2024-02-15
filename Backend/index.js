@@ -3,7 +3,7 @@ import {createServer} from 'node:http';
 import { Server } from 'socket.io';
 import cors from 'cors';
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 const server = createServer(app);

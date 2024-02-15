@@ -5,7 +5,7 @@ export const SocketContext = createContext(null);
 
 export const SocketProvider = (props) => {
 
-    const BASE_URL = "http://localhost:3000";
+    const BASE_URL = "http://localhost:3000" || "https://chatroom-backend-tzyj.onrender.com";
 
     const socket = io(BASE_URL);
     const [userName, setUserName] = useState('');
