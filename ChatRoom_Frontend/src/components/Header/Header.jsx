@@ -11,8 +11,8 @@ function Header() {
       <div className=" w-[100px] lg:w-[150px]  float-start ">
         <img src={logo} alt="logo image" />
       </div>
-      <div className=" text-xl text-white float-end flex flex-col items-center">
-        <FaUserCircle size={50} color="black" />
+      <div className=" text-xl text-white float-end flex flex-col items-center w-4 px-7 drop-shadow-2xl">
+        <FaUserCircle size={50} color="white" />
         {userName}
       </div>
     </div>

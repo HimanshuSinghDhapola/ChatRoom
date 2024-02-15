@@ -2,6 +2,9 @@ import express from "express";
 import { createServer } from "node:http";
 import { Server } from "socket.io";
 import cors from "cors";
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 const PORT = process.env.PORT || 3000;
 
@@ -10,7 +13,7 @@ const server = createServer(app);
 const io = new Server(server, {
   cors: {
     // origin: "https://chat-room01.netlify.app",
-    origin: "http://localhost:5173",
+    origin: process.env.URL,
     methods: ["GET", "POST"],
     credentials: true,
   },
