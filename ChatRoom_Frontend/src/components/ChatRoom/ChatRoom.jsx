@@ -4,6 +4,7 @@ import { SocketContext } from "../../Context/SocketContext";
 import { IoSend } from "react-icons/io5";
 import Header from "../Header/Header";
 import "./styles.css";
+import Chats from "../Chats/Chats";
 
 function ChatRoom() {
   const navigate = useNavigate();
@@ -13,10 +14,10 @@ function ChatRoom() {
   const [feed, setFeed] = useState([]);
 
   useEffect(() => {
-    if(userName === ""){
+    if (userName === "") {
       navigate(-1);
     }
-  }, [])
+  }, []);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -53,43 +54,12 @@ function ChatRoom() {
       inputRef.current.focus();
     }
   }, []);
-
+  
   return (
     <div className="wrapper w-full h-screen overflow-hidden">
       <Header />
       <div className="chat-card p-4">
-        <div className="container my-auto mx-auto">
-          {feed.map((feedContent) => {
-            return (
-              <div
-                className={
-                  " md:max-w-[40%] max-w-[60%] message " +
-                  (feedContent.author
-                    ? feedContent.author === userName
-                      ? "right"
-                      : "left"
-                    : "center")
-                }
-              >
-                {feedContent.message ? (
-                  <div className="p-1">
-                    <div className="text-xs font-bold justify-start mb-0">
-                      {feedContent.author}
-                    </div>
-                    <div className=" -my-0.5 font-normal">
-                      {feedContent.message}
-                    </div>
-                    <div className=" font-medium flex justify-end text-[10px] -my-1">
-                      {feedContent.time}
-                    </div>
-                  </div>
-                ) : (
-                  feedContent
-                )}
-              </div>
-            );
-          })}
-        </div>
+        <Chats feed={feed} />
         <div className="send">
           <form onSubmit={handleSubmit} className="form">
             <input
